@@ -1,6 +1,6 @@
 {
-  "name": "@swimlane/ngx-charts",
-  "version": "19.0.1",
+  "name": "@sebastientromp/ngx-charts",
+  "version": "19.0.5",
   "description": "Declarative Charting Framework for Angular",
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "url": "https://github.com/swimlane/ngx-charts/issues"
   },
   "homepage": "https://github.com/swimlane/ngx-charts#readme",
+  "private": false,
   "peerDependencies": {
     "@angular/animations": ">=12.0.0",
     "@angular/cdk": ">=12.0.0",

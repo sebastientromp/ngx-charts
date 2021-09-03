@@ -1,14 +1,10 @@
+import { ComponentPortal, DomPortalOutlet } from '@angular/cdk/portal';
 import {
   ApplicationRef,
   ComponentFactoryResolver,
-  ComponentRef,
-  Injectable,
-  Injector,
-  ViewContainerRef,
-  EmbeddedViewRef,
-  Type
+  ComponentRef, EmbeddedViewRef, Injectable,
+  Injector, Type, ViewContainerRef
 } from '@angular/core';
-import { DomPortalOutlet, ComponentPortal } from '@angular/cdk/portal';
 
 function isViewContainerRef(x: any): x is ViewContainerRef {
   return x.element;
@@ -79,6 +75,12 @@ export class InjectionService {
    * @memberOf InjectionService
    */
   getComponentRootNode(component: ViewContainerRef | ComponentRef<any>): HTMLElement {
+    const userRoot = document.querySelector('.overlay-container-parent');
+    // console.log('[debug] getComponentRootNode?', userRoot, new Error().stack);
+    if (userRoot) {
+      return userRoot as HTMLElement;
+    }
+
     if (isViewContainerRef(component)) {
       return component.element.nativeElement;
     }
