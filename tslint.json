@@ -1,6 +1,6 @@
 {
   "rulesDirectory": ["codelyzer"],
-  "extends": ["codelyzer", "tslint-config-swimlane/base", "tslint-config-prettier"],
+  "extends": ["codelyzer", "tslint-config-prettier"],
   "rules": {
     "deprecation": {
       "severity": "warning"
