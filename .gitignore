@@ -13,3 +13,4 @@ release/src/
 release/demo/
 .vscode/
 /*.tgz
+.angular
