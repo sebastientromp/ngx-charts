@@ -1,16 +1,23 @@
 import {
+  ChangeDetectionStrategy,
   Component,
-  Input,
-  Output,
-  EventEmitter,
   ElementRef,
+  EventEmitter,
+  Input,
   OnChanges,
-  SimpleChanges,
-  ChangeDetectionStrategy
+  Output,
+  SimpleChanges
 } from '@angular/core';
 import { pie } from 'd3-shape';
 import { PieGridDataItem } from '../models/chart-data.model';
-import { PieGridData } from './pie-grid.component';
+
+export interface PieGridData {
+  data: PieGridDataItem;
+  height: number;
+  width: number;
+  x: number;
+  y: number;
+}
 
 export interface PieArc {
   animate: boolean;

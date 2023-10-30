@@ -1,29 +1,29 @@
 import {
-  Component,
-  Input,
-  ViewEncapsulation,
   ChangeDetectionStrategy,
+  Component,
   ContentChild,
-  TemplateRef,
+  EventEmitter,
+  Input,
   Output,
-  EventEmitter
+  TemplateRef,
+  ViewEncapsulation
 } from '@angular/core';
 import { min } from 'd3-array';
 import { format } from 'd3-format';
 
-import { calculateViewDimensions } from '../common/view-dimensions.helper';
-import { ColorHelper } from '../common/color.helper';
 import { BaseChartComponent } from '../common/base-chart.component';
-import { trimLabel } from '../common/trim-label.helper';
+import { ColorHelper } from '../common/color.helper';
 import { gridLayout } from '../common/grid-layout.helper';
 import { formatLabel } from '../common/label.helper';
-import { DataItem, PieGridDataItem } from '../models/chart-data.model';
 import { PlacementTypes } from '../common/tooltip/position';
 import { StyleTypes } from '../common/tooltip/style.type';
-import { ViewDimensions } from '../common/types/view-dimension.interface';
+import { trimLabel } from '../common/trim-label.helper';
 import { ScaleType } from '../common/types/scale-type.enum';
+import { ViewDimensions } from '../common/types/view-dimension.interface';
+import { calculateViewDimensions } from '../common/view-dimensions.helper';
+import { DataItem, PieGridDataItem } from '../models/chart-data.model';
 
-export interface PieGridData {
+interface PieGridData {
   data: PieGridDataItem;
   height: number;
   width: number;
