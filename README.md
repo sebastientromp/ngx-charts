@@ -77,4 +77,4 @@ To learn how to use the ngx-charts components to build custom charts and find ex
 
 [SecOps Hub](http://secopshub.com) is an open, product-agnostic, online community for security professionals to share ideas, use cases, best practices, and incident response strategies.
 
-rm -rf dist && npm run build:lib:prod && 'cp' -rf dist/swimlane/ngx-charts /e/Source/zerotoheroes/firestone/core/node_modules/\@sebastientromp/
+rm -rf dist && npm run build:lib && 'cp' -rf dist/swimlane/ngx-charts /e/Source/zerotoheroes/firestone/core/node_modules/\@sebastientromp/
